@@ -5,25 +5,32 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Unifai News</title>
-  <link rel ="stylesheet" href ="/css/style.css"> 
+  <link rel ="stylesheet" href ="/css/styles.css"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Orbitron:wght@700&family=Press+Start+2P&family=Tourney:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
+  <header class="header">
     <div class="header__logo">Unifai News Page</div>
     <div class="header__search">Search</div>
   </header> 
 
   <div class="wrapper">
     <div class="news">
-      <% articles.forEach(function(article, index) {%>
-        <a href="#" class=""news__card">
-          <!-- <%- console.log('this is articles: ', article) %>  -->
-          <h2>
-            <%- article.title %>
-          </h2>
-          <p>the Link</p>
-        </a>
-      <% }) %> 
+      <% if(articles !== null) { %>
+        <% articles.forEach(function(article, index) {%>
+          <a href="#" class="news__card">
+            <img src="<%- article.image %>" alt="<%- article.title %>">
+            <h2>
+              <%- article.title %>
+            </h2>
+            <p><%- article.description %></p>
+          </a>
+        <% }) %> 
+      <% } else { %> 
+        No Posts found.
+        <% } %>
       </div>
   </div>"
 
