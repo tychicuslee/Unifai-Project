@@ -8,6 +8,26 @@
   <link rel ="stylesheet" href ="/css/style.css"> 
 </head>
 <body>
-  <h1>Unifai News Page</h1>
+  <header>
+    <div class="header__logo">Unifai News Page</div>
+    <div class="header__search">Search</div>
+  </header> 
+
+  <div class="wrapper">
+    <div class="news">
+      <% articles.forEach(function(article, index) {%>
+        <a href="#" class=""news__card">
+          <!-- <%- console.log('this is articles: ', article) %>  -->
+          <h2>
+            <%- article.title %>
+          </h2>
+          <p>the Link</p>
+        </a>
+      <% }) %> 
+      </div>
+  </div>"
+
+
+
 </body>
 </html>
